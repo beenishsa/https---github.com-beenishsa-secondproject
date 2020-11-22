@@ -1,25 +1,15 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
+function search()
+    {
+  var resultHtml;
+   var input = $('#search-field').val();
+   console.log(input)
+   $.get("http://api.giphy.com/v1/gifs/search?q="+input+"&api_key=MKnhlA6fn7IktUX3r5DzPOtEipLKtXbF", function(response) {
+      console.log(response.data[0]); 
+      //$('#img').html("<img src="+ response.data[0].images.downsized_large.url + ">");
 
-//$('#fetch-from-api').click(function() {
-    //console.log("i was clicked");
-    
-$.get("https://api.giphy.com/v1/gifs/search?api_key=qZqq8jPd45n49RvLiY6PtNPiAixu1RsK&q=corona", function(giphyResponse) {
-    console.log(giphyResponse);
-    console.log('giphyData', giphyResponse.data)
-    console.log('giphyResponse result 0 (1st result)'- giphyResponse.data[0]);
-    console.log('giphyResponse result 0 (1st result) - all images list', giphyResponse.data[0].images);
-    console.log('giphyResponse result 0 (1st result)- all images list- original image', giphyResponse.data[0].images.original);
-    console.log('giphyResponse result 0 (1st result) - all images list- original image-url', giphyResponse.data[0].images.original.url);
-     
-    let imgHtml="<img src=${giphyResponse.data[0].images.original.url} />"
-
-    $('#first-result-image').html(imgHtml);
-
-
-        });
-    })
-//});
-
-
-
+    for(let image of response.data){
+      resultHtml = resultHtml + '<img src='+image.images.downsized_large.url+'/>'
+      }
+  $('#first-result-image').html(resultHtml)
+}) 
+}

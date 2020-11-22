@@ -7,17 +7,15 @@
        
         <title>Giphy Search</title>
     </head>
-    <body>
-        <div> 
-            <form>
-            <div class="form-group">
-                <label >Search Your Favorite Giphy</label>
-                <br>
+    <body class="background">  
+        <div class="container">
+            <span class="text1">SEARCH YOUR FAVORITE</span>
+            <span class="text2">GIPHY</span>
+            <br>
                 <input type="text" id="search-field" placeholder="search...">
-            </div>
-            <button id='fetch-from-api'>Submit</button>
-            </form>           
-        </div>
-        <div id="first-result-image"></div>
+                <button id="fetch-from-api" onclick="search()">Submit</button>  
+        </div>               
+                      
+                <div id="first-result-image"></div>
     </body>
 </html>
