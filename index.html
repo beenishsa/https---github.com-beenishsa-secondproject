@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
        
         <title>Giphy Search</title>
@@ -12,11 +15,30 @@
             <span class="text1">SEARCH YOUR FAVORITE</span>
             <span class="text2">GIPHY</span>
             <div class="searchbox">
-                <input type="text" class="input" id="search-field" placeholder="Search...">
+                <input type="text" class="searchinput" id="search-field" placeholder="Search...">
             </div>
             <button class="btn" id="fetch-from-api" onclick="search()">Submit</button> 
-        </div>               
-                      
-                <div id="first-result-image"></div>
+            <br>
+            <br>
+            <br>
+            <div id="first-result-image" class="grid grid-cols-12 gap-4"></div>
+                       <br>
+                       <br>
+                       <br>
+                 <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>              
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                    <div class="col-span-12 sm:col-span-6 md:col-span-4"></div>
+                </div>
+        </div>                             
     </body>
 </html>
